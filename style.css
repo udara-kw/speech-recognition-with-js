@@ -2,3 +2,42 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.mic-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.mic {
+    background-color:rgb(100%, 43.921569%, 27.058824%);
+    border-radius: 50%;
+    padding: 1.5rem;
+    transition: 1s ease;
+}
+
+.mic:hover {
+    background-color: rgb(96.470588%, 29.803922%, 10.980392%);
+}
+
+.mic:active {
+    background-color: rgb(36, 36, 36);
+}
+
+.content-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
