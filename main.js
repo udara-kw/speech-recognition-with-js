@@ -7,12 +7,11 @@ var pitchValue = document.querySelector(".pitch-value");
 var rate = document.querySelector("#rate");
 var rateValue = document.querySelector(".rate-value");
 
-pitch.onchange = function () {
-  pitchValue.textContent = pitch.value;
-};
-
 rate.onchange = function () {
-  rateValue.textContent = rate.value;
+  rateValue.textContent = Math.round((rate.value) * 100) + "%";
+};
+pitch.onchange = function () {
+  pitchValue.textContent = Math.round((pitch.value) * 100) + "%";
 };
 
 try {
@@ -92,12 +91,13 @@ try {
     if (message.includes("how are you")) {
       const finalText = greetings[Math.floor(Math.random() * greetings.length)];
       speech.text = finalText;
-    }if (message.includes("Say something! I can hear you!")) {
-        speech.text = message;
-      }
+    }
+    if (message.includes("Say something! I can hear you!")) {
+      speech.text = message;
+    }
 
     window.speechSynthesis.speak(speech);
-    content.textContent = message;
+    content.textContent = message[0].toUpperCase() + message.slice(1);
   }
 } catch (error) {
   console.log(error);
