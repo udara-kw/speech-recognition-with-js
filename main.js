@@ -8,10 +8,10 @@ var rate = document.querySelector("#rate");
 var rateValue = document.querySelector(".rate-value");
 
 rate.onchange = function () {
-  rateValue.textContent = Math.round((rate.value) * 100) + "%";
+  rateValue.textContent = Math.round(rate.value * 100) + "%";
 };
 pitch.onchange = function () {
-  pitchValue.textContent = Math.round((pitch.value) * 100) + "%";
+  pitchValue.textContent = Math.round(pitch.value * 100) + "%";
 };
 
 try {
