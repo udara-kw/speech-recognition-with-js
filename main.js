@@ -16,8 +16,11 @@ rate.onchange = function () {
 };
 
 try {
-  const greetings = ["im good", "doing good", "leave me alone"];
-  const weather = ["how do i know", "why do you ask me"];
+  const greetings = [
+    "I'm feeling good. Hope you are having a nice day",
+    "Doing good today. How are you?",
+    "Leave me alone!",
+  ];
   const unidentified = [
     "Is that English?",
     "Who are you?",
@@ -34,16 +37,14 @@ try {
     voices = synth.getVoices();
 
     for (i = 0; i < voices.length; i++) {
-      var option = document.createElement("option");
-      option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+      if (voices[i].lang.includes("en")) {
+        var option = document.createElement("option");
+        option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-      if (voices[i].default) {
-        option.textContent += " -- DEFAULT";
+        option.setAttribute("data-lang", voices[i].lang);
+        option.setAttribute("data-name", voices[i].name);
+        voiceSelect.appendChild(option);
       }
-
-      option.setAttribute("data-lang", voices[i].lang);
-      option.setAttribute("data-name", voices[i].name);
-      voiceSelect.appendChild(option);
     }
   }
 
@@ -53,7 +54,7 @@ try {
   }
 
   recognition.onstart = function () {
-    console.log("Voice is activated");
+    content.textContent = "Ehm, Say something now!";
   };
 
   recognition.onresult = function (event) {
@@ -68,7 +69,7 @@ try {
       recognition.start();
     } catch (e) {
       e.toString().includes("recognition has already started")
-        ? readOutLoud("You bastard")
+        ? readOutLoud("Say something! I can hear you!")
         : console.error(error);
     }
   });
@@ -91,7 +92,9 @@ try {
     if (message.includes("how are you")) {
       const finalText = greetings[Math.floor(Math.random() * greetings.length)];
       speech.text = finalText;
-    }
+    }if (message.includes("Say something! I can hear you!")) {
+        speech.text = message;
+      }
 
     window.speechSynthesis.speak(speech);
     content.textContent = message;
