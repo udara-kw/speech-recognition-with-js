@@ -4,90 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/fullpage.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Speech Recognition with JS</title>
   </head>
   <body>
-    <div class="container">
-      <div class="mic-container">
-        <div class="mic">
-          <svg height="8rem" viewBox="-90 0 512 512.00001" class="btn-svg">
-            <g id="surface1">
-              <path
-                d="M 331.964844 275.082031 C 331.964844 266.652344 325.128906 259.816406 316.695312 259.816406 C 308.261719 259.816406 301.425781 266.652344 301.425781 275.082031 C 301.425781 349.769531 240.667969 410.527344 165.980469 410.527344 C 91.296875 410.527344 30.539062 349.769531 30.539062 275.082031 C 30.539062 266.652344 23.703125 259.816406 15.269531 259.816406 C 6.835938 259.816406 0 266.652344 0 275.082031 C 0 361.460938 66.320312 432.621094 150.714844 440.355469 L 150.714844 481.460938 L 94.046875 481.460938 C 85.613281 481.460938 78.777344 488.296875 78.777344 496.730469 C 78.777344 505.164062 85.613281 512 94.046875 512 L 237.917969 512 C 246.347656 512 253.1875 505.164062 253.1875 496.730469 C 253.1875 488.296875 246.347656 481.460938 237.917969 481.460938 L 181.25 481.460938 L 181.25 440.355469 C 265.644531 432.625 331.964844 361.460938 331.964844 275.082031 Z M 331.964844 275.082031 "
-                style="
-                  stroke: none;
-                  fill-rule: nonzero;
-                  fill: rgb(23.137255%, 28.627451%, 34.509804%);
-                  fill-opacity: 1;
-                "
-              />
-              <path
-                d="M 331.964844 275.082031 C 331.964844 266.652344 325.128906 259.816406 316.695312 259.816406 C 308.261719 259.816406 301.425781 266.652344 301.425781 275.082031 C 301.425781 349.769531 240.667969 410.527344 165.980469 410.527344 C 165.875 410.527344 165.769531 410.523438 165.660156 410.523438 L 165.660156 512 L 237.917969 512 C 246.347656 512 253.1875 505.164062 253.1875 496.730469 C 253.1875 488.296875 246.347656 481.460938 237.917969 481.460938 L 181.25 481.460938 L 181.25 440.359375 C 265.644531 432.625 331.964844 361.460938 331.964844 275.082031 Z M 331.964844 275.082031 "
-                style="
-                  stroke: none;
-                  fill-rule: nonzero;
-                  fill: rgb(9.019608%, 12.54902%, 16.470588%);
-                  fill-opacity: 1;
-                "
-              />
-              <path
-                d="M 165.980469 372.851562 C 112.074219 372.851562 68.214844 328.992188 68.214844 275.082031 L 68.214844 97.765625 C 68.214844 43.859375 112.074219 0 165.980469 0 C 219.890625 0 263.75 43.859375 263.75 97.765625 L 263.75 275.082031 C 263.75 328.992188 219.890625 372.851562 165.980469 372.851562 Z M 165.980469 372.851562 "
-                style="
-                  stroke: none;
-                  fill-rule: nonzero;
-                  fill: rgb(100%, 43.921569%, 27.058824%);
-                  fill-opacity: 1;
-                "
-              />
-              <path
-                d="M 165.980469 0 C 165.875 0 165.769531 0.00390625 165.660156 0.00390625 L 165.660156 372.847656 C 165.769531 372.847656 165.875 372.851562 165.980469 372.851562 C 219.890625 372.851562 263.75 328.992188 263.75 275.082031 L 263.75 97.765625 C 263.75 43.859375 219.890625 0 165.980469 0 Z M 165.980469 0 "
-                style="
-                  stroke: none;
-                  fill-rule: nonzero;
-                  fill: rgb(96.470588%, 29.803922%, 10.980392%);
-                  fill-opacity: 1;
-                "
-              />
-            </g>
-          </svg>
+    <div id="fullpage">
+      <section class="section s1">
+        <h1>UDARA-KW</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </section>
+      <section class="section s2">
+        <h1>Right Linear to Left Linear</h1>
+      </section>
+      <section class="section s3">
+        <h1>Speech Recogition</h1>
+        <div class="container">
+          <div class="mic-container">
+            <div class="mic">
+              <svg height="8rem" viewBox="-90 0 512 512.00001" class="btn-svg">
+                <g id="surface1">
+                  <path
+                    d="M 331.964844 275.082031 C 331.964844 266.652344 325.128906 259.816406 316.695312 259.816406 C 308.261719 259.816406 301.425781 266.652344 301.425781 275.082031 C 301.425781 349.769531 240.667969 410.527344 165.980469 410.527344 C 91.296875 410.527344 30.539062 349.769531 30.539062 275.082031 C 30.539062 266.652344 23.703125 259.816406 15.269531 259.816406 C 6.835938 259.816406 0 266.652344 0 275.082031 C 0 361.460938 66.320312 432.621094 150.714844 440.355469 L 150.714844 481.460938 L 94.046875 481.460938 C 85.613281 481.460938 78.777344 488.296875 78.777344 496.730469 C 78.777344 505.164062 85.613281 512 94.046875 512 L 237.917969 512 C 246.347656 512 253.1875 505.164062 253.1875 496.730469 C 253.1875 488.296875 246.347656 481.460938 237.917969 481.460938 L 181.25 481.460938 L 181.25 440.355469 C 265.644531 432.625 331.964844 361.460938 331.964844 275.082031 Z M 331.964844 275.082031 "
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(23.137255%, 28.627451%, 34.509804%);
+                      fill-opacity: 1;
+                    "
+                  />
+                  <path
+                    d="M 331.964844 275.082031 C 331.964844 266.652344 325.128906 259.816406 316.695312 259.816406 C 308.261719 259.816406 301.425781 266.652344 301.425781 275.082031 C 301.425781 349.769531 240.667969 410.527344 165.980469 410.527344 C 165.875 410.527344 165.769531 410.523438 165.660156 410.523438 L 165.660156 512 L 237.917969 512 C 246.347656 512 253.1875 505.164062 253.1875 496.730469 C 253.1875 488.296875 246.347656 481.460938 237.917969 481.460938 L 181.25 481.460938 L 181.25 440.359375 C 265.644531 432.625 331.964844 361.460938 331.964844 275.082031 Z M 331.964844 275.082031 "
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(9.019608%, 12.54902%, 16.470588%);
+                      fill-opacity: 1;
+                    "
+                  />
+                  <path
+                    d="M 165.980469 372.851562 C 112.074219 372.851562 68.214844 328.992188 68.214844 275.082031 L 68.214844 97.765625 C 68.214844 43.859375 112.074219 0 165.980469 0 C 219.890625 0 263.75 43.859375 263.75 97.765625 L 263.75 275.082031 C 263.75 328.992188 219.890625 372.851562 165.980469 372.851562 Z M 165.980469 372.851562 "
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(100%, 43.921569%, 27.058824%);
+                      fill-opacity: 1;
+                    "
+                  />
+                  <path
+                    d="M 165.980469 0 C 165.875 0 165.769531 0.00390625 165.660156 0.00390625 L 165.660156 372.847656 C 165.769531 372.847656 165.875 372.851562 165.980469 372.851562 C 219.890625 372.851562 263.75 328.992188 263.75 275.082031 L 263.75 97.765625 C 263.75 43.859375 219.890625 0 165.980469 0 Z M 165.980469 0 "
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(96.470588%, 29.803922%, 10.980392%);
+                      fill-opacity: 1;
+                    "
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="content-container">
+            <h3 class="content">Click me!</h3>
+          </div>
+          <div class="settings">
+            <div class="rate-container">
+              <input
+                type="range"
+                min="0.5"
+                max="2"
+                value="1"
+                step="0.01"
+                id="rate"
+                class="slider"
+              /></br>
+              <label for="rate">Speed: <span class="rate-value">100%</span></label>
+            </div>
+            <div class="pitch-container">
+              <input
+                type="range"
+                min="0.5"
+                max="2"
+                value="1"
+                step="0.01"
+                id="pitch"
+                class="slider"
+              /></br>
+              <label for="pitch">Pitch: <span class="pitch-value">100%</span></label>
+            </div>
+            <div class="voice-container">
+              <select>
+                <option selected disabled>Select another character</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="content-container">
-        <h3 class="content">Click me!</h3>
-      </div>
-      <div class="settings">
-        <div class="rate-container">
-          <input
-            type="range"
-            min="0.5"
-            max="2"
-            value="1"
-            step="0.01"
-            id="rate"
-            class="slider"
-          /></br>
-          <label for="rate">Speed: <span class="rate-value">100%</span></label>
-        </div>
-        <div class="pitch-container">
-          <input
-            type="range"
-            min="0.5"
-            max="2"
-            value="1"
-            step="0.01"
-            id="pitch"
-            class="slider"
-          /></br>
-          <label for="pitch">Pitch: <span class="pitch-value">100%</span></label>
-        </div>
-        <div class="voice-container">
-          <select>
-            <option selected disabled>Select another character</option>
-          </select>
-        </div>
-      </div>
+      </section>
+      <section class="section s4">
+        <h1>Copyright Credits</h1>
+        <p>
+          <a href='https://pngtree.com/so/office-clipart'>
+            office clipart png from pngtree.com
+          </a>
+        </p>
+      </section>
     </div>
-    <script src="./main.js"></script>
+    <script src="./assets/js/fullpage/fullpage.min.js"></script>
+    <script src="./assets/js/fullpage/main.js"></script>
+    <script src="./assets/js/speechrecognition/main.js"></script>
   </body>
 </html>
